@@ -1,4 +1,4 @@
-﻿using MySql.Data.MySqlClient;
+﻿using Microsoft.Data.Sqlite;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using Coffee.Data;
 
 namespace Coffee
 {
@@ -16,7 +17,7 @@ namespace Coffee
             InitializeComponent();
         }
 
-        public void adminMenuMessage1 () //методы вывода информационного окна
+        public void adminMenuMessage1() //методы вывода информационного окна
         {
             MessageBox.Show("Ингредиенты пополнены!");
         }
@@ -77,46 +78,13 @@ namespace Coffee
 
             popolnenie(id, value);
         }
-        private void popolnenie(int iD, int valueUp)
+
+        private void popolnenie(int id, int valueUp)
         {
-            try //проверка подключения к БД
-            {
-                string connectionString = "server=localhost;port=3306;username=root;password=1111;database=coffeemat"; //создание запросов
-                string cmd = $"SELECT valuess FROM ingredients WHERE id={iD}";
-
-                using (MySqlConnection connection = new MySqlConnection(connectionString)) //подключение к БД
-                {
-                    connection.Open(); //открытие подключения к БД
-
-                    MySqlCommand command = new MySqlCommand(cmd, connection);
-
-                    int value = (int)command.ExecuteScalar();
-
-                    if (value < valueUp) //проверка на наличие ингредиентов в автомате
-                    {
-                        value = valueUp;
-
-                        cmd = $"UPDATE ingredients SET valuess = {value} WHERE id={iD}";
-
-                        MySqlCommand command5 = new MySqlCommand(cmd, connection);
-
-                        command5.ExecuteNonQuery();
-
-                        adminMenuMessage1();
-                    }
-                    else
-                    {
-                        adminMenuMessage2();
-                    }
-
-                    connection.Close(); //закрытие подключения
-                }
-
-            }
-            catch (Exception) //что произойдет, если будет ошибка в коде
-            {
-                MessageBox.Show("Ошибка подключения!");
-            }
+            DataBase dataBaseService = new DataBase();
+            if (dataBaseService.DataBasePopolnenie(id, valueUp) == "Success") adminMenuMessage1(); //вызов метода информационного окна при успешном пополнении
+            else if (dataBaseService.DataBasePopolnenie(id, valueUp) == "Failed") adminMenuMessage2();
+            else MessageBox.Show("Ошибка подключения!");
         }
     }
 }

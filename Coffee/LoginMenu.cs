@@ -1,4 +1,4 @@
-﻿using MySql.Data.MySqlClient;
+﻿using Coffee.Data;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,42 +11,33 @@ namespace Coffee
 {
     public partial class LoginMenu : Form
     {
-        DB db = new DB(); //подключение к БД
+        DataBase dataBaseService = new DataBase(); //подключение к БД
 
         public LoginMenu()
         {
             InitializeComponent();
-
+            this.loginTextBox.AutoSize = false;
+            this.loginTextBox.Size = new Size(562, 61); //установление высоты поля ввода логина
             this.passTextBox.AutoSize = false;
             this.passTextBox.Size = new Size(562, 61); //установление высоты поля ввода пароля
         }
 
         private void loginButton_Click(object sender, EventArgs e) //действие, которое срабатывает при нажатии на кнопку "Войти"
         {
+            DataBase dataBaseService = new DataBase();
+
             String loginUser = loginTextBox.Text;
             String passUser = passTextBox.Text; //получение данных от пользователя
 
-            DataTable table = new DataTable();
-
-            MySqlDataAdapter adapter = new MySqlDataAdapter();
-
-            MySqlCommand command = new MySqlCommand("SELECT * FROM users WHERE login = @uL AND pass = @uP", db.getConnection()); 
-            //создание заглушек и указание БД
-            command.Parameters.Add("@uL", MySqlDbType.VarChar).Value = loginUser; //указание переменных
-            command.Parameters.Add("@uP", MySqlDbType.VarChar).Value = passUser;
-
-            adapter.SelectCommand = command; //выбор команды для выполнения
-            adapter.Fill(table); //заполнение таблицы
-
-            if (table.Rows.Count > 0)
+            string correctLogin = dataBaseService.Authorization("login"); //получение правильного логина из БД
+            string correctPass = dataBaseService.Authorization("pass"); //получение правильного пароля из БД
+            if (loginUser == correctLogin && passUser == correctPass) //проверка введённых данных
             {
-                //проверка введённых данных
                 this.Hide();
                 AdminMenu adminMenu = new AdminMenu();
                 adminMenu.Show();
             }
-            else
-                MessageBox.Show("Логин или пароль неверные!");
+            else MessageBox.Show("Логин или пароль неверные!");
         }
 
         private void exitButton2_Click(object sender, EventArgs e) //выход из программы по нажатию кнопки "Выход"

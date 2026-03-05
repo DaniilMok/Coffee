@@ -37,10 +37,12 @@ namespace Coffee
             latteButton = new System.Windows.Forms.Button();
             americButton = new System.Windows.Forms.Button();
             panel3 = new System.Windows.Forms.Panel();
+            valueSugarLabel = new System.Windows.Forms.Label();
             sugar1 = new System.Windows.Forms.Button();
             sugar2 = new System.Windows.Forms.Button();
             sugarLabel = new System.Windows.Forms.Label();
             panel2 = new System.Windows.Forms.Panel();
+            balanceLabel = new System.Windows.Forms.Label();
             rub200 = new System.Windows.Forms.Button();
             rub100 = new System.Windows.Forms.Button();
             rub50 = new System.Windows.Forms.Button();
@@ -72,8 +74,9 @@ namespace Coffee
             Menu.Controls.Add(panel1);
             Menu.Dock = System.Windows.Forms.DockStyle.Fill;
             Menu.Location = new System.Drawing.Point(0, 0);
+            Menu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             Menu.Name = "Menu";
-            Menu.Size = new System.Drawing.Size(1468, 746);
+            Menu.Size = new System.Drawing.Size(1287, 635);
             Menu.TabIndex = 0;
             // 
             // sdachaButton
@@ -85,11 +88,12 @@ namespace Coffee
             sdachaButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
             sdachaButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             sdachaButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            sdachaButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            sdachaButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold);
             sdachaButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            sdachaButton.Location = new System.Drawing.Point(1144, 663);
+            sdachaButton.Location = new System.Drawing.Point(1004, 572);
+            sdachaButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             sdachaButton.Name = "sdachaButton";
-            sdachaButton.Size = new System.Drawing.Size(312, 71);
+            sdachaButton.Size = new System.Drawing.Size(273, 53);
             sdachaButton.TabIndex = 9;
             sdachaButton.Text = "Сдача";
             sdachaButton.UseVisualStyleBackColor = false;
@@ -104,11 +108,12 @@ namespace Coffee
             adminButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
             adminButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             adminButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            adminButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            adminButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold);
             adminButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            adminButton.Location = new System.Drawing.Point(480, 663);
+            adminButton.Location = new System.Drawing.Point(421, 572);
+            adminButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             adminButton.Name = "adminButton";
-            adminButton.Size = new System.Drawing.Size(493, 71);
+            adminButton.Size = new System.Drawing.Size(431, 53);
             adminButton.TabIndex = 8;
             adminButton.Text = "Меню администратора";
             adminButton.UseVisualStyleBackColor = false;
@@ -123,11 +128,12 @@ namespace Coffee
             cappButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
             cappButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             cappButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            cappButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            cappButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold);
             cappButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            cappButton.Location = new System.Drawing.Point(758, 524);
+            cappButton.Location = new System.Drawing.Point(664, 468);
+            cappButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             cappButton.Name = "cappButton";
-            cappButton.Size = new System.Drawing.Size(493, 71);
+            cappButton.Size = new System.Drawing.Size(431, 53);
             cappButton.TabIndex = 7;
             cappButton.Text = "Каппучино 20 рублей";
             cappButton.UseVisualStyleBackColor = false;
@@ -142,11 +148,12 @@ namespace Coffee
             espresButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
             espresButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             espresButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            espresButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            espresButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold);
             espresButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            espresButton.Location = new System.Drawing.Point(758, 427);
+            espresButton.Location = new System.Drawing.Point(664, 395);
+            espresButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             espresButton.Name = "espresButton";
-            espresButton.Size = new System.Drawing.Size(493, 71);
+            espresButton.Size = new System.Drawing.Size(431, 53);
             espresButton.TabIndex = 6;
             espresButton.Text = "Эспрессо 30 рублей";
             espresButton.UseVisualStyleBackColor = false;
@@ -161,11 +168,12 @@ namespace Coffee
             latteButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
             latteButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             latteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            latteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            latteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold);
             latteButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            latteButton.Location = new System.Drawing.Point(199, 524);
+            latteButton.Location = new System.Drawing.Point(175, 468);
+            latteButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             latteButton.Name = "latteButton";
-            latteButton.Size = new System.Drawing.Size(493, 71);
+            latteButton.Size = new System.Drawing.Size(431, 53);
             latteButton.TabIndex = 5;
             latteButton.Text = "Латте 30 рублей";
             latteButton.UseVisualStyleBackColor = false;
@@ -180,11 +188,12 @@ namespace Coffee
             americButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
             americButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             americButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            americButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            americButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold);
             americButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            americButton.Location = new System.Drawing.Point(199, 427);
+            americButton.Location = new System.Drawing.Point(175, 395);
+            americButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             americButton.Name = "americButton";
-            americButton.Size = new System.Drawing.Size(493, 71);
+            americButton.Size = new System.Drawing.Size(431, 53);
             americButton.TabIndex = 4;
             americButton.Text = "Американо 25 рублей";
             americButton.UseVisualStyleBackColor = false;
@@ -193,13 +202,26 @@ namespace Coffee
             // panel3
             // 
             panel3.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            panel3.Controls.Add(valueSugarLabel);
             panel3.Controls.Add(sugar1);
             panel3.Controls.Add(sugar2);
             panel3.Controls.Add(sugarLabel);
-            panel3.Location = new System.Drawing.Point(904, 182);
+            panel3.Location = new System.Drawing.Point(794, 173);
+            panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             panel3.Name = "panel3";
-            panel3.Size = new System.Drawing.Size(486, 182);
+            panel3.Size = new System.Drawing.Size(425, 136);
             panel3.TabIndex = 2;
+            // 
+            // valueSugarLabel
+            // 
+            valueSugarLabel.AutoSize = true;
+            valueSugarLabel.Font = new System.Drawing.Font("Comic Sans MS", 22.2F, System.Drawing.FontStyle.Bold);
+            valueSugarLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            valueSugarLabel.Location = new System.Drawing.Point(137, 69);
+            valueSugarLabel.Name = "valueSugarLabel";
+            valueSugarLabel.Size = new System.Drawing.Size(36, 41);
+            valueSugarLabel.TabIndex = 5;
+            valueSugarLabel.Text = "0";
             // 
             // sugar1
             // 
@@ -209,11 +231,12 @@ namespace Coffee
             sugar1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
             sugar1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             sugar1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            sugar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            sugar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold);
             sugar1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            sugar1.Location = new System.Drawing.Point(3, 73);
+            sugar1.Location = new System.Drawing.Point(3, 55);
+            sugar1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             sugar1.Name = "sugar1";
-            sugar1.Size = new System.Drawing.Size(97, 95);
+            sugar1.Size = new System.Drawing.Size(85, 71);
             sugar1.TabIndex = 4;
             sugar1.Text = "-";
             sugar1.UseVisualStyleBackColor = false;
@@ -227,11 +250,12 @@ namespace Coffee
             sugar2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
             sugar2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             sugar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            sugar2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            sugar2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold);
             sugar2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            sugar2.Location = new System.Drawing.Point(212, 73);
+            sugar2.Location = new System.Drawing.Point(216, 55);
+            sugar2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             sugar2.Name = "sugar2";
-            sugar2.Size = new System.Drawing.Size(97, 95);
+            sugar2.Size = new System.Drawing.Size(85, 71);
             sugar2.TabIndex = 3;
             sugar2.Text = "+";
             sugar2.UseVisualStyleBackColor = false;
@@ -240,17 +264,18 @@ namespace Coffee
             // sugarLabel
             // 
             sugarLabel.AutoSize = true;
-            sugarLabel.Font = new System.Drawing.Font("Comic Sans MS", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            sugarLabel.Font = new System.Drawing.Font("Comic Sans MS", 22.2F, System.Drawing.FontStyle.Bold);
             sugarLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            sugarLabel.Location = new System.Drawing.Point(3, 0);
+            sugarLabel.Location = new System.Drawing.Point(37, 0);
             sugarLabel.Name = "sugarLabel";
-            sugarLabel.Size = new System.Drawing.Size(306, 51);
+            sugarLabel.Size = new System.Drawing.Size(249, 41);
             sugarLabel.TabIndex = 1;
             sugarLabel.Text = "Добавьте сахар";
             // 
             // panel2
             // 
             panel2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            panel2.Controls.Add(balanceLabel);
             panel2.Controls.Add(rub200);
             panel2.Controls.Add(rub100);
             panel2.Controls.Add(rub50);
@@ -259,10 +284,22 @@ namespace Coffee
             panel2.Controls.Add(rub2);
             panel2.Controls.Add(rub1);
             panel2.Controls.Add(payLabel);
-            panel2.Location = new System.Drawing.Point(3, 182);
+            panel2.Location = new System.Drawing.Point(3, 173);
+            panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             panel2.Name = "panel2";
-            panel2.Size = new System.Drawing.Size(775, 182);
+            panel2.Size = new System.Drawing.Size(678, 136);
             panel2.TabIndex = 1;
+            // 
+            // balanceLabel
+            // 
+            balanceLabel.AutoSize = true;
+            balanceLabel.Font = new System.Drawing.Font("Comic Sans MS", 22.2F, System.Drawing.FontStyle.Bold);
+            balanceLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            balanceLabel.Location = new System.Drawing.Point(418, 0);
+            balanceLabel.Name = "balanceLabel";
+            balanceLabel.Size = new System.Drawing.Size(240, 41);
+            balanceLabel.TabIndex = 9;
+            balanceLabel.Text = "Баланс: 0 руб.";
             // 
             // rub200
             // 
@@ -272,11 +309,12 @@ namespace Coffee
             rub200.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
             rub200.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             rub200.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            rub200.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            rub200.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold);
             rub200.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            rub200.Location = new System.Drawing.Point(648, 73);
+            rub200.Location = new System.Drawing.Point(567, 55);
+            rub200.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             rub200.Name = "rub200";
-            rub200.Size = new System.Drawing.Size(123, 95);
+            rub200.Size = new System.Drawing.Size(108, 71);
             rub200.TabIndex = 8;
             rub200.Text = "200";
             rub200.UseVisualStyleBackColor = false;
@@ -290,11 +328,12 @@ namespace Coffee
             rub100.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
             rub100.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             rub100.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            rub100.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            rub100.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold);
             rub100.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            rub100.Location = new System.Drawing.Point(524, 73);
+            rub100.Location = new System.Drawing.Point(458, 55);
+            rub100.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             rub100.Name = "rub100";
-            rub100.Size = new System.Drawing.Size(118, 95);
+            rub100.Size = new System.Drawing.Size(103, 71);
             rub100.TabIndex = 7;
             rub100.Text = "100";
             rub100.UseVisualStyleBackColor = false;
@@ -308,11 +347,12 @@ namespace Coffee
             rub50.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
             rub50.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             rub50.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            rub50.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            rub50.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold);
             rub50.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            rub50.Location = new System.Drawing.Point(421, 73);
+            rub50.Location = new System.Drawing.Point(368, 55);
+            rub50.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             rub50.Name = "rub50";
-            rub50.Size = new System.Drawing.Size(97, 95);
+            rub50.Size = new System.Drawing.Size(85, 71);
             rub50.TabIndex = 6;
             rub50.Text = "50";
             rub50.UseVisualStyleBackColor = false;
@@ -326,11 +366,12 @@ namespace Coffee
             rub10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
             rub10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             rub10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            rub10.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            rub10.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold);
             rub10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            rub10.Location = new System.Drawing.Point(318, 73);
+            rub10.Location = new System.Drawing.Point(278, 55);
+            rub10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             rub10.Name = "rub10";
-            rub10.Size = new System.Drawing.Size(97, 95);
+            rub10.Size = new System.Drawing.Size(85, 71);
             rub10.TabIndex = 5;
             rub10.Text = "10";
             rub10.UseVisualStyleBackColor = false;
@@ -344,11 +385,12 @@ namespace Coffee
             rub5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
             rub5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             rub5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            rub5.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            rub5.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold);
             rub5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            rub5.Location = new System.Drawing.Point(215, 73);
+            rub5.Location = new System.Drawing.Point(188, 55);
+            rub5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             rub5.Name = "rub5";
-            rub5.Size = new System.Drawing.Size(97, 95);
+            rub5.Size = new System.Drawing.Size(85, 71);
             rub5.TabIndex = 4;
             rub5.Text = "5";
             rub5.UseVisualStyleBackColor = false;
@@ -362,11 +404,12 @@ namespace Coffee
             rub2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
             rub2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             rub2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            rub2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            rub2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold);
             rub2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            rub2.Location = new System.Drawing.Point(112, 73);
+            rub2.Location = new System.Drawing.Point(98, 55);
+            rub2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             rub2.Name = "rub2";
-            rub2.Size = new System.Drawing.Size(97, 95);
+            rub2.Size = new System.Drawing.Size(85, 71);
             rub2.TabIndex = 3;
             rub2.Text = "2";
             rub2.UseVisualStyleBackColor = false;
@@ -380,11 +423,12 @@ namespace Coffee
             rub1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
             rub1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             rub1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            rub1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            rub1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold);
             rub1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            rub1.Location = new System.Drawing.Point(9, 73);
+            rub1.Location = new System.Drawing.Point(8, 55);
+            rub1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             rub1.Name = "rub1";
-            rub1.Size = new System.Drawing.Size(97, 95);
+            rub1.Size = new System.Drawing.Size(85, 71);
             rub1.TabIndex = 2;
             rub1.Text = "1";
             rub1.UseVisualStyleBackColor = false;
@@ -393,11 +437,11 @@ namespace Coffee
             // payLabel
             // 
             payLabel.AutoSize = true;
-            payLabel.Font = new System.Drawing.Font("Comic Sans MS", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            payLabel.Font = new System.Drawing.Font("Comic Sans MS", 22.2F, System.Drawing.FontStyle.Bold);
             payLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             payLabel.Location = new System.Drawing.Point(0, 0);
             payLabel.Name = "payLabel";
-            payLabel.Size = new System.Drawing.Size(431, 51);
+            payLabel.Size = new System.Drawing.Size(350, 41);
             payLabel.TabIndex = 0;
             payLabel.Text = "Внесите оплату (руб.)";
             // 
@@ -407,8 +451,9 @@ namespace Coffee
             panel1.Controls.Add(WelcomeMenu);
             panel1.Dock = System.Windows.Forms.DockStyle.Top;
             panel1.Location = new System.Drawing.Point(0, 0);
+            panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new System.Drawing.Size(1468, 159);
+            panel1.Size = new System.Drawing.Size(1287, 119);
             panel1.TabIndex = 0;
             // 
             // exitButton1
@@ -420,11 +465,12 @@ namespace Coffee
             exitButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
             exitButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             exitButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            exitButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            exitButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19F, System.Drawing.FontStyle.Bold);
             exitButton1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            exitButton1.Location = new System.Drawing.Point(1313, 0);
+            exitButton1.Location = new System.Drawing.Point(1139, 11);
+            exitButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             exitButton1.Name = "exitButton1";
-            exitButton1.Size = new System.Drawing.Size(155, 53);
+            exitButton1.Size = new System.Drawing.Size(136, 59);
             exitButton1.TabIndex = 9;
             exitButton1.Text = "Выход";
             exitButton1.UseVisualStyleBackColor = false;
@@ -433,24 +479,25 @@ namespace Coffee
             // WelcomeMenu
             // 
             WelcomeMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            WelcomeMenu.Font = new System.Drawing.Font("Comic Sans MS", 34F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            WelcomeMenu.Font = new System.Drawing.Font("Comic Sans MS", 34F, System.Drawing.FontStyle.Bold);
             WelcomeMenu.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             WelcomeMenu.Location = new System.Drawing.Point(0, 0);
             WelcomeMenu.Name = "WelcomeMenu";
-            WelcomeMenu.Size = new System.Drawing.Size(1468, 160);
+            WelcomeMenu.Size = new System.Drawing.Size(1287, 120);
             WelcomeMenu.TabIndex = 0;
             WelcomeMenu.Text = "Добро пожаловать!\r\nВнесите оплату и выберите напиток.\r\n";
             WelcomeMenu.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // MainMenu
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.Color.SaddleBrown;
             BackgroundImage = Properties.Resources.background_zerna_texture_coffee_beans_kofe_fon_roasted_1;
             BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            ClientSize = new System.Drawing.Size(1468, 746);
+            ClientSize = new System.Drawing.Size(1287, 635);
             Controls.Add(Menu);
+            Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             Name = "MainMenu";
             Text = "Кофемат";
             Menu.ResumeLayout(false);
@@ -487,6 +534,8 @@ namespace Coffee
         private System.Windows.Forms.Button americButton;
         private System.Windows.Forms.Button exitButton1;
         private System.Windows.Forms.Button sdachaButton;
+        private System.Windows.Forms.Label valueSugarLabel;
+        private System.Windows.Forms.Label balanceLabel;
     }
 }
 
